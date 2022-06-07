@@ -53,7 +53,6 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setBackground(red);
         jLabel1.setFont(new java.awt.Font("Bauhaus 93", 0, 30)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SOG INC.");
