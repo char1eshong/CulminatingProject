@@ -17,6 +17,9 @@ public class GamesPage extends javax.swing.JFrame {
     public GamesPage() {
         initComponents();
     }
+    
+    SlotsPage slotsPage = new SlotsPage();
+    SlotsRules slotsRules = new SlotsRules();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -52,6 +55,11 @@ public class GamesPage extends javax.swing.JFrame {
         jButton2.setText("SLOTS");
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createEtchedBorder()), null));
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Gill Sans MT", 0, 15)); // NOI18N
         jButton3.setText("CRASH");
@@ -136,7 +144,13 @@ public class GamesPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        slotsRules.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        slotsPage.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
