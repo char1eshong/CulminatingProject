@@ -1,1 +1,1 @@
-## CulminatingProject
+## Culminating Project
