@@ -164,6 +164,7 @@ public class GamesPage extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         slotsRules.setVisible(true);
+        slotsRules.setDefaultCloseOperation(slotsRules.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -173,6 +174,7 @@ public class GamesPage extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         wheelRules.setVisible(true);
+        wheelRules.setDefaultCloseOperation(wheelRules.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -181,6 +183,7 @@ public class GamesPage extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         crashRules.setVisible(true);
+        crashRules.setDefaultCloseOperation(crashRules.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
