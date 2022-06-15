@@ -18,8 +18,8 @@ public class GamesPage extends javax.swing.JFrame {
         initComponents();
     }
     
-    SlotsPage slotsPage = new SlotsPage();
-    SlotsRules slotsRules = new SlotsRules();
+    MinesPage minesPage = new MinesPage();
+    MinesRules minesRules = new MinesRules();
     WheelPage wheelPage = new WheelPage();
     WheelRules wheelRules = new WheelRules();
     CrashPage crashPage = new CrashPage();
@@ -56,7 +56,7 @@ public class GamesPage extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Gill Sans MT", 0, 15)); // NOI18N
-        jButton2.setText("SLOTS");
+        jButton2.setText("MINES");
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createEtchedBorder()), null));
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -164,14 +164,14 @@ public class GamesPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        slotsRules.setVisible(true);
-        slotsRules.setDefaultCloseOperation(slotsRules.DISPOSE_ON_CLOSE);
+        minesRules.setVisible(true);
+        minesRules.setDefaultCloseOperation(minesRules.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        slotsPage.setVisible(true);
-        slotsPage.setDefaultCloseOperation(slotsPage.DISPOSE_ON_CLOSE);
+        minesPage.setVisible(true);
+        minesPage.setDefaultCloseOperation(minesPage.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
