@@ -160,6 +160,7 @@ public class GamesPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         wheelPage.setVisible(true);
         wheelPage.setDefaultCloseOperation(wheelPage.DISPOSE_ON_CLOSE);
+        this.toBack();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -172,6 +173,7 @@ public class GamesPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         minesPage.setVisible(true);
         minesPage.setDefaultCloseOperation(minesPage.DISPOSE_ON_CLOSE);
+        this.toBack();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -182,6 +184,7 @@ public class GamesPage extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         crashPage.setVisible(true);
         crashPage.setDefaultCloseOperation(crashPage.DISPOSE_ON_CLOSE);
+        this.toBack();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
