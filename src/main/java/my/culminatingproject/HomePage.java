@@ -93,6 +93,7 @@ public class HomePage extends javax.swing.JFrame {
     private void gamesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gamesButtonActionPerformed
         gamesPage.setVisible(true);
         gamesPage.setDefaultCloseOperation(gamesPage.DISPOSE_ON_CLOSE);
+        this.toBack();
     }//GEN-LAST:event_gamesButtonActionPerformed
 
     /**
