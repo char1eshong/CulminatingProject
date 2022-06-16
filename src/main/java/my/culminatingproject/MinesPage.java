@@ -61,7 +61,6 @@ public class MinesPage extends javax.swing.JFrame {
         });
 
         jButton3.setText("A,2");
-        jButton3.setActionCommand("A,2");
 
         jButton4.setText("B,3");
 
@@ -95,7 +94,7 @@ public class MinesPage extends javax.swing.JFrame {
             }
         });
 
-        betInputTextField.setText("0.00");
+        betInputTextField.setText("1.00");
         betInputTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 betInputTextFieldActionPerformed(evt);
@@ -184,7 +183,7 @@ public class MinesPage extends javax.swing.JFrame {
     private void cashoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashoutButtonActionPerformed
         // TODO add your handling code here:
         //Cashout Button
-        jButtonA1.setBackground(Color.GRAY);
+        jButtonA1.setBackground(Color.gray);
     }//GEN-LAST:event_cashoutButtonActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
