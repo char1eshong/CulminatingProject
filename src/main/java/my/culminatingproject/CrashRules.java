@@ -32,6 +32,7 @@ public class CrashRules extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("1. Place your bet in the empty box\n\n2. As time goes on, the multiplier will increase\n\n3. The longer you wait, the higher chance of a CRASH\n\n");
@@ -45,7 +46,7 @@ public class CrashRules extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
 
         pack();

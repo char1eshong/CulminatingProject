@@ -29,7 +29,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="0" pref="150" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="0" pref="140" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -43,6 +43,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="1. Place your bet in the empty box&#xa;&#xa;2. As time goes on, the multiplier will increase&#xa;&#xa;3. The longer you wait, the higher chance of a CRASH&#xa;&#xa;"/>
