@@ -18,20 +18,20 @@ public class MinesPage extends javax.swing.JFrame {
     //Creates 2d array of mines
     private static int[][] tileArray = new int [3][4];
     //Multiplier
-    private double multi = 1.00;
+    private static double multi = 1.00;
     //Button clicked variables
-    boolean A1bool = false;
-    boolean A2bool = false;
-    boolean A3bool = false;
-    boolean A4bool = false;
-    boolean B1bool = false;
-    boolean B2bool = false;
-    boolean B3bool = false;
-    boolean B4bool = false;
-    boolean C1bool = false;
-    boolean C2bool = false;
-    boolean C3bool = false;
-    boolean C4bool = false;
+    public static boolean A1bool = false;
+    public static boolean A2bool = false;
+    public static boolean A3bool = false;
+    public static boolean A4bool = false;
+    public static boolean B1bool = false;
+    public static boolean B2bool = false;
+    public static boolean B3bool = false;
+    public static boolean B4bool = false;
+    public static boolean C1bool = false;
+    public static boolean C2bool = false;
+    public static boolean C3bool = false;
+    public static boolean C4bool = false;
     
     /**
      * Creates new form SlotsPage
@@ -275,8 +275,19 @@ public class MinesPage extends javax.swing.JFrame {
     private void cashoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashoutButtonActionPerformed
         // TODO add your handling code here:
         //Cashout Button
-        A1.setBackground(Color.GRAY);
-        randomize();
+        cashout();
+        A1.setBackground(Color.gray);
+        A2.setBackground(Color.gray);
+        A3.setBackground(Color.gray);
+        A4.setBackground(Color.gray);
+        B1.setBackground(Color.gray);
+        B2.setBackground(Color.gray);
+        B3.setBackground(Color.gray);
+        B4.setBackground(Color.gray);
+        C1.setBackground(Color.gray);
+        C2.setBackground(Color.gray);
+        C3.setBackground(Color.gray);
+        C4.setBackground(Color.gray);
     }//GEN-LAST:event_cashoutButtonActionPerformed
 
     private void C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C2ActionPerformed
@@ -487,6 +498,7 @@ public class MinesPage extends javax.swing.JFrame {
                 new MinesPage().setVisible(true);
             }
         });
+        
     }
     
     public static void randomize(){
@@ -527,9 +539,36 @@ public class MinesPage extends javax.swing.JFrame {
         return tileArray[col][row] == 0;   
     }
     
+    public static void cashout(){
+        
+        reset();
+        
+    }
+    
     public void enableButtons(){
         A1.setEnabled(true);
         A2.setEnabled(true);
+        
+    }
+    
+    public static void reset(){
+        
+     A1bool = false;
+     A2bool = false;
+     A3bool = false;
+     A4bool = false;
+     B1bool = false;
+     B2bool = false;
+     B3bool = false;
+     B4bool = false;
+     C1bool = false;
+     C2bool = false;
+     C3bool = false;
+     C4bool = false;
+     
+     multi = 1.0;
+     
+     randomize();
         
     }
 
