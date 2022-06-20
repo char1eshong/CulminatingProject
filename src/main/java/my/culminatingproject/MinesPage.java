@@ -33,6 +33,8 @@ public class MinesPage extends javax.swing.JFrame {
     public static boolean C3bool = false;
     public static boolean C4bool = false;
     
+    public static int balance = 50;
+    
     /**
      * Creates new form MinesPage
      */
@@ -50,7 +52,7 @@ public class MinesPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        cashoutButton = new javax.swing.JButton();
+        betButton = new javax.swing.JButton();
         A2 = new javax.swing.JButton();
         B3 = new javax.swing.JButton();
         B1 = new javax.swing.JButton();
@@ -68,6 +70,7 @@ public class MinesPage extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         multiLabel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        cashoutButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -76,10 +79,10 @@ public class MinesPage extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("MINES");
 
-        cashoutButton.setText("Cashout");
-        cashoutButton.addActionListener(new java.awt.event.ActionListener() {
+        betButton.setText("Bet");
+        betButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cashoutButtonActionPerformed(evt);
+                betButtonActionPerformed(evt);
             }
         });
 
@@ -182,11 +185,17 @@ public class MinesPage extends javax.swing.JFrame {
 
         jLabel4.setText("X");
 
+        cashoutButton1.setText("Cashout");
+        cashoutButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cashoutButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -216,29 +225,39 @@ public class MinesPage extends javax.swing.JFrame {
                                 .addComponent(C3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(C4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(betInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(multiLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
+                        .addComponent(jLabel4)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(betInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cashoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 57, Short.MAX_VALUE))
+                        .addComponent(cashoutButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(betButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(A3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -256,39 +275,32 @@ public class MinesPage extends javax.swing.JFrame {
                     .addComponent(C4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(C2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(C3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(multiLabel)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(multiLabel)
+                            .addComponent(jLabel4))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cashoutButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(betInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(cashoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
+                    .addComponent(betButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cashoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashoutButtonActionPerformed
+    private void betButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_betButtonActionPerformed
         // TODO add your handling code here:
-        //Cashout Button
-        cashout();
-        A1.setBackground(Color.gray);
-        A2.setBackground(Color.gray);
-        A3.setBackground(Color.gray);
-        A4.setBackground(Color.gray);
-        B1.setBackground(Color.gray);
-        B2.setBackground(Color.gray);
-        B3.setBackground(Color.gray);
-        B4.setBackground(Color.gray);
-        C1.setBackground(Color.gray);
-        C2.setBackground(Color.gray);
-        C3.setBackground(Color.gray);
-        C4.setBackground(Color.gray);
-    }//GEN-LAST:event_cashoutButtonActionPerformed
+        reset();
+    }//GEN-LAST:event_betButtonActionPerformed
 
     private void C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C2ActionPerformed
         // TODO add your handling code here:
@@ -464,6 +476,24 @@ public class MinesPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_C4ActionPerformed
 
+    private void cashoutButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashoutButton1ActionPerformed
+        // TODO add your handling code here:
+        //Cashout Button
+        cashout();
+        A1.setBackground(Color.gray);
+        A2.setBackground(Color.gray);
+        A3.setBackground(Color.gray);
+        A4.setBackground(Color.gray);
+        B1.setBackground(Color.gray);
+        B2.setBackground(Color.gray);
+        B3.setBackground(Color.gray);
+        B4.setBackground(Color.gray);
+        C1.setBackground(Color.gray);
+        C2.setBackground(Color.gray);
+        C3.setBackground(Color.gray);
+        C4.setBackground(Color.gray);
+    }//GEN-LAST:event_cashoutButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -543,6 +573,7 @@ public class MinesPage extends javax.swing.JFrame {
         
         reset();
         
+        
     }
     
     public void enableButtons(){
@@ -585,8 +616,9 @@ public class MinesPage extends javax.swing.JFrame {
     private javax.swing.JButton C2;
     private javax.swing.JButton C3;
     private javax.swing.JButton C4;
+    private javax.swing.JButton betButton;
     private javax.swing.JTextField betInputTextField;
-    private javax.swing.JButton cashoutButton;
+    private javax.swing.JButton cashoutButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
