@@ -34,7 +34,7 @@ public class MinesPage extends javax.swing.JFrame {
     public static boolean C4bool = false;
     
     /**
-     * Creates new form SlotsPage
+     * Creates new form MinesPage
      */
     public MinesPage() {
         initComponents();
@@ -167,7 +167,7 @@ public class MinesPage extends javax.swing.JFrame {
             }
         });
 
-        betInputTextField.setText("0.00");
+        betInputTextField.setText("1.00");
         betInputTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 betInputTextFieldActionPerformed(evt);
