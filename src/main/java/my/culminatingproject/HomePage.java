@@ -31,13 +31,16 @@ public class HomePage extends javax.swing.JFrame {
         gamesButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setName("Home Page"); // NOI18N
         setResizable(false);
 
+        gamesButton.setBackground(new java.awt.Color(51, 51, 51));
         gamesButton.setFont(new java.awt.Font("Gill Sans MT", 0, 20)); // NOI18N
+        gamesButton.setForeground(new java.awt.Color(204, 204, 204));
         gamesButton.setText("GAMES");
         gamesButton.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createEtchedBorder()));
         gamesButton.addActionListener(new java.awt.event.ActionListener() {
@@ -46,7 +49,9 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
+        exitButton.setBackground(new java.awt.Color(51, 51, 51));
         exitButton.setFont(new java.awt.Font("Gill Sans MT", 0, 20)); // NOI18N
+        exitButton.setForeground(new java.awt.Color(204, 204, 204));
         exitButton.setText("EXIT");
         exitButton.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createEtchedBorder()));
         exitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -56,8 +61,22 @@ public class HomePage extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Bauhaus 93", 0, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SOG INC.");
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 285, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,6 +89,8 @@ public class HomePage extends javax.swing.JFrame {
                     .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(gamesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,6 +102,8 @@ public class HomePage extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                 .addGap(50, 50, 50))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,5 +158,6 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton exitButton;
     private javax.swing.JButton gamesButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
