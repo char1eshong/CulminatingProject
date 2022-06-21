@@ -40,7 +40,10 @@ public class MinesRules extends javax.swing.JFrame {
         setResizable(false);
 
         jTextArea3.setEditable(false);
+        jTextArea3.setBackground(new java.awt.Color(51, 51, 51));
         jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
+        jTextArea3.setForeground(new java.awt.Color(204, 204, 204));
         jTextArea3.setRows(5);
         jTextArea3.setText("1. Place your bet in the box below then press the play button to begin MINES\n\n2. There will be randomized mines around the board\n\n3. If the box becomes green, the multiplier increases\n\n4. If the box becomes red, that means the game is over and the multiplier will be x0.0\n");
         jScrollPane3.setViewportView(jTextArea3);
@@ -49,11 +52,11 @@ public class MinesRules extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
         );
 
         pack();

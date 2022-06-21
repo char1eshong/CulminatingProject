@@ -41,12 +41,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane3" alignment="1" pref="150" max="32767" attributes="0"/>
+          <Component id="jScrollPane3" alignment="0" pref="500" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane3" min="-2" pref="160" max="-2" attributes="0"/>
+          <Component id="jScrollPane3" alignment="0" pref="160" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -61,7 +61,16 @@
         <Component class="javax.swing.JTextArea" name="jTextArea3">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Gill Sans MT" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="1. Place your bet in the box below then press the play button to begin MINES&#xa;&#xa;2. There will be randomized mines around the board&#xa;&#xa;3. If the box becomes green, the multiplier increases&#xa;&#xa;4. If the box becomes red, that means the game is over and the multiplier will be x0.0&#xa;"/>
           </Properties>
