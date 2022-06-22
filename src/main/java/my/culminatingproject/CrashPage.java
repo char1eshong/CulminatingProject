@@ -19,7 +19,7 @@ public class CrashPage extends javax.swing.JFrame {
      * Creates new form CrashPage
      */
     private static double multi = 1.00;
-    
+    public static boolean start = false;
     public CrashPage() {
         initComponents();
     }
@@ -167,6 +167,10 @@ public class CrashPage extends javax.swing.JFrame {
     private void beginInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beginInputActionPerformed
         // TODO add your handling code here:
         beginInput.setBackground(Color.green);
+        
+        start = true; //figuring out how to turn off timer here WIP
+        
+        if(start == true){
         Timer timer = new Timer();
         
         TimerTask task = new TimerTask()
@@ -178,12 +182,13 @@ public class CrashPage extends javax.swing.JFrame {
             }
         };
         timer.scheduleAtFixedRate(task, 0, 100);
-        
         random();
+        }
     }//GEN-LAST:event_beginInputActionPerformed
 
     private void stopInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopInputActionPerformed
         // TODO add your handling code here:
+        start = false;
     }//GEN-LAST:event_stopInputActionPerformed
 
     /**
